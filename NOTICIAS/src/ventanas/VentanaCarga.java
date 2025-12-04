@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import java.io.File;
 import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 
 
 
@@ -53,9 +54,10 @@ public class VentanaCarga {
 	private void initialize() {
 
 		frame = new JFrame();
+		frame.getContentPane().setBackground(new Color(128, 255, 255));
 
 		
-		frame.setBounds(100, 100, 611, 446);
+		frame.setBounds(100, 100, 610, 446);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.getContentPane().setLayout(null);
@@ -68,11 +70,11 @@ public class VentanaCarga {
 		
 		
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(0, 0, 46, 14);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel lblFondo = new JLabel("/NOTICIAS/src/Imagenes/descargaNoti.jpg");
+		lblFondo.setBounds(0, 0, 594, 407);
+		frame.getContentPane().add(lblFondo);
 		
-
+		
 		
 
 	}
@@ -88,12 +90,17 @@ public class VentanaCarga {
 						progressBar.setValue(i);
 						
 						if (i == 80) {
-
+						/*	if (comprobarArchivos) {
+								return;
+							}
+						*/
 						}
 
 					}
 
 					frame.dispose();
+					iniciarLogin();
+					
 					
 
 				} catch (InterruptedException e) {
@@ -104,5 +111,19 @@ public class VentanaCarga {
 
 		});
 
+	}
+	
+	
+	public void comprobarArchivos() {
+		
+		
+	}
+	
+	
+	public void iniciarLogin() {
+		
+		Login inicioLogin = new Login();
+		
+		
 	}
 }
