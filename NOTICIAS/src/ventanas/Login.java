@@ -3,10 +3,15 @@ package ventanas;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 public class Login {
 
 	private JFrame frame;
+	private JTextField Usuario;
+	private JPasswordField Contraseña;
 
 	/**
 	 * Launch the application.
@@ -23,11 +28,10 @@ public class Login {
 			}
 		});
 	}
-	
+
 	/**
 	 * Create the application.
 	 */
-	
 	public Login() {
 		initialize();
 	}
@@ -39,6 +43,11 @@ public class Login {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.getContentPane().setLayout(null);
+
+		JLabel lblTitulo = new JLabel("INICIO SESION");
+		frame.getContentPane().add(lblTitulo);
 	}
 
 }

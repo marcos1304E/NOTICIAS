@@ -10,22 +10,19 @@ import java.io.File;
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 
-
-
 public class VentanaCarga {
 
 	private JFrame frame;
 	private JProgressBar progressBar;
 
-	
 	/*
-	 * Launch the application. 
+	 * Launch the application.
 	 */
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				
+
 				try {
 					VentanaCarga window = new VentanaCarga();
 					window.frame.setVisible(true);
@@ -36,6 +33,7 @@ public class VentanaCarga {
 				}
 			}
 		});
+
 	}
 
 	/**
@@ -46,8 +44,7 @@ public class VentanaCarga {
 		initialize();
 	}
 
-	
-	/** 
+	/**
 	 * Initialize the contents of the frame.
 	 */
 
@@ -56,7 +53,6 @@ public class VentanaCarga {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(128, 255, 255));
 
-		
 		frame.setBounds(100, 100, 610, 446);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
@@ -67,15 +63,12 @@ public class VentanaCarga {
 		progressBar.setStringPainted(true);
 		progressBar.setBounds(50, 350, 500, 25);
 		frame.getContentPane().add(progressBar);
-		
-		
-		
-		JLabel lblFondo = new JLabel("/NOTICIAS/src/Imagenes/descargaNoti.jpg");
-		lblFondo.setBounds(0, 0, 594, 407);
+
+		JLabel lblFondo = new JLabel("");/// NOTICIAS/src/Imagenes/descargaNoti.jpg
+		lblFondo.setIcon(new ImageIcon(VentanaCarga.class.getResource("/Imagenes/descargaNoti.jpg")));
+		;
+		lblFondo.setBounds(0, 0, 610, 446);
 		frame.getContentPane().add(lblFondo);
-		
-		
-		
 
 	}
 
@@ -85,23 +78,21 @@ public class VentanaCarga {
 			@Override
 			public void run() {
 				try {
-					for (int i = 0; i < 100; i++) {
+					for (int i = 0; i <= 100; i++) {
 						Thread.sleep(50);
 						progressBar.setValue(i);
-						
+
 						if (i == 80) {
-						/*	if (comprobarArchivos) {
-								return;
+							if (!comprobarArchivos()) {
+								System.exit(0);
 							}
-						*/
+
 						}
 
 					}
 
 					frame.dispose();
 					iniciarLogin();
-					
-					
 
 				} catch (InterruptedException e) {
 					e.printStackTrace();
@@ -111,19 +102,19 @@ public class VentanaCarga {
 
 		});
 
+		hilo.start();
+
 	}
-	
-	
-	public void comprobarArchivos() {
-		
-		
+
+	private boolean comprobarArchivos() {
+
+		return true;
 	}
-	
-	
+
 	public void iniciarLogin() {
-		
-		Login inicioLogin = new Login();
-		
-		
+
+		Login ventanaLogin = new Login();
+		System.out.println("se abre el login");
+
 	}
 }
