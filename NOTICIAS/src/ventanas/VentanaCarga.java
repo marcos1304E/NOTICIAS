@@ -51,7 +51,7 @@ public class VentanaCarga {
 	private void initialize() {
 
 		frame = new JFrame();
-		frame.getContentPane().setBackground(new Color(128, 255, 255));
+		frame.getContentPane().setBackground(new Color(255, 255, 255));
 
 		frame.setBounds(100, 100, 610, 446);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -67,7 +67,7 @@ public class VentanaCarga {
 		JLabel lblFondo = new JLabel("");/// NOTICIAS/src/Imagenes/descargaNoti.jpg
 		lblFondo.setIcon(new ImageIcon(VentanaCarga.class.getResource("/Imagenes/descargaNoti.jpg")));
 		;
-		lblFondo.setBounds(0, 0, 610, 446);
+		lblFondo.setBounds(0, 0, 594, 407);
 		frame.getContentPane().add(lblFondo);
 
 	}
@@ -90,9 +90,10 @@ public class VentanaCarga {
 						}
 
 					}
-
+					
 					frame.dispose();
 					iniciarLogin();
+					
 
 				} catch (InterruptedException e) {
 					e.printStackTrace();
