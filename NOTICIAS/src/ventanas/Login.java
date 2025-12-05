@@ -1,6 +1,7 @@
 package ventanas;
 
 import java.awt.EventQueue;
+import java.awt.Font;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -46,8 +47,22 @@ public class Login {
 		frame.setLocationRelativeTo(null);
 		frame.getContentPane().setLayout(null);
 
+		
 		JLabel lblTitulo = new JLabel("INICIO SESION");
+		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblTitulo.setBounds(140, 30, 200, 20);
 		frame.getContentPane().add(lblTitulo);
+		
+		//usewr JL JTxt
+		
+		
+		
+		//contra JPssw
+		//tengo que hacer de ocultar y ver contra
+		
+		
+		//boton entrar(valido login)
+		
 	}
 
 }
