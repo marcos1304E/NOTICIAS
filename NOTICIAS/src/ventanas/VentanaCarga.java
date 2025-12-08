@@ -115,6 +115,7 @@ public class VentanaCarga {
 	public void iniciarLogin() {
 
 		Login ventanaLogin = new Login();
+		ventanaLogin.frame.setVisible(true);
 		System.out.println("se abre el login");
 
 	}

@@ -1,43 +1,63 @@
 package ventanas;
 
-import java.awt.EventQueue;
-
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
-public class PanelUsuario {
+import modelo.Usuario;
 
-	private JFrame frame;
+public class PanelUsuario extends JPanel {
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PanelUsuario window = new PanelUsuario();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+    private Usuario usuario; // Necesitamos saber quién es el usuario
 
-	/**
-	 * Create the application.
-	 */
-	public PanelUsuario() {
-		initialize();
-	}
+    // Constructor
+    public PanelUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        initialize();
+    }
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
+    private void initialize() {
+        setLayout(null);
+        setBounds(0, 0, 800, 500); 
+        
+        JLabel textoRol = new JLabel("PANEL DE USUARIO: " + usuario.getNickname());
+        textoRol.setForeground(Color.BLUE);
+        textoRol.setFont(new Font("Tahoma", Font.BOLD, 14));
+        textoRol.setBounds(50, 30, 300, 20);
+        add(textoRol);
+        
+        JButton botonConfigurar = new JButton("Configurar Preferencias");
+        botonConfigurar.setBounds(50, 80, 200, 40);
+        add(botonConfigurar);
+        
+        botonConfigurar.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Botón pulsado: Abriendo preferencias...");
+                try {
+                    VentanaPreferencias vPref = new VentanaPreferencias(usuario);
+                    vPref.frame.setVisible(true);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        //ya tenemos las preferencias que se me guarden en un txt
+        
+        
+        
+        //aqui la app lee el txt de preferencias, vea que periodicos utilizo se conecte
+        // a internet y muestre los titulaares
+        // --- BOTÓN 2: VER NOTICIAS ---
+        JButton botonVerNoticias = new JButton("Ver Noticias");
+        botonVerNoticias.setBounds(50, 140, 200, 40);
+        add(botonVerNoticias);
+        
+        
+    }
 }
