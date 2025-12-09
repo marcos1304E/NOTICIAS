@@ -1,0 +1,3 @@
+usuario1;El Economista;As;El Mundo;CNN;Vandal;Fotogramas
+usuario2;El Economista;Mundo Deportivo;El Mundo;BBC News;Vandal;Sensacine
+usuario3;Expansión;Marca;El Mundo;CNN;3DJuegos;FilmAffinity

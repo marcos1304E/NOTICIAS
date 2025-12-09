@@ -1,43 +1,37 @@
 package ventanas;
 
-import java.awt.EventQueue;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import java.awt.Color;
+import java.awt.Font;
+import modelo.Usuario;
 
-import javax.swing.JFrame;
+public class PanelAdmin extends JPanel {
 
-public class PanelAdmin {
+    private Usuario admin;
 
-	private JFrame frame;
+    public PanelAdmin(Usuario admin) {
+        this.admin = admin;
+        initialize();
+    }
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PanelAdmin window = new PanelAdmin();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the application.
-	 */
-	public PanelAdmin() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
+    private void initialize() {
+        setLayout(null);
+        setBounds(0, 0, 800, 500);
+        
+        JLabel textoRol = new JLabel("PANEL DE ADMINISTRADOR");
+        textoRol.setForeground(Color.RED);
+        textoRol.setFont(new Font("Tahoma", Font.BOLD, 14));
+        textoRol.setBounds(50, 30, 300, 20);
+        add(textoRol);
+        
+        JButton botonGestionUsuarios = new JButton("Gestión Usuarios");
+        botonGestionUsuarios.setBounds(50, 80, 200, 40);
+        add(botonGestionUsuarios);
+        
+        JButton botonTest = new JButton("Test Noticias / Email");
+        botonTest.setBounds(50, 140, 200, 40);
+        add(botonTest);
+    }
 }
