@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+=======
+	<classpathentry kind="src" path=""/>
+>>>>>>> 1aeb6cd2a15753196708c85707dbddefacf3ccb4
 	<classpathentry kind="lib" path="libs/activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail-api-1.6.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="libs/jsoup-1.21.2.jar"/>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="libs/jsoup-1.21.2-sources.jar"/>
+>>>>>>> 1aeb6cd2a15753196708c85707dbddefacf3ccb4
 	<classpathentry kind="output" path="bin"/>
 </classpath>
