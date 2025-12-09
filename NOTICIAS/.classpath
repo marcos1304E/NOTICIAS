@@ -1,33 +1,9 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/javax.mail-api-1.6.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/javax.mail.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/activation-1.1.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/jsoup-1.21.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/jsoup-1.21.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DAM/Downloads/jsoup-1.21.2-sources.jar"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path=""/>
 	<classpathentry kind="lib" path="libs/activation-1.1.1.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail.jar"/>
 	<classpathentry kind="lib" path="libs/javax.mail-api-1.6.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="libs/jsoup-1.21.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
->>>>>>> c3d257df11695785ab0b448c60eb8cb8811d1f66
